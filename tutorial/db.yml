@@ -14,3 +14,8 @@
   #   just like read and execute bits on a filesystem.
   privileges: [ read, execute ]
   roles: !group secrets-users
+
+# Entitlements
+- !grant
+  role: !group secrets-users
+  member: !layer /frontend
